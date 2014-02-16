@@ -147,17 +147,17 @@ bindsym $mod+r mode "resize"
 # finds out, if available)
 
 bar {
+        position top
         status_command i3status
 }
 
 # autostart
 exec feh --bg-scale ~/.i3/wall.jpg
 exec nm-applet &
-exec qsynergy &
+#exec qsynergy &
 exec setxkbmap us altgr-intl &
 #exec gtk-redshift -l 48.3384141:10.869304 -m randr &
-exec xcompmgr &
-exec xset m 3 1
+#exec xset m 3 1
 exec xset -b
 
 # scratchpad w/ mod(+Shift)+/
@@ -169,7 +169,7 @@ bindsym $mod+F12 exec scrot
 
 # standby and lockscreen w/ $mod+Shift+v and $mod+Shift+Esc
 bindsym $mod+Shift+v exec i3lock -d -u -p win -i ~/.i3/lock.png
-bindsym $mod+Shift+Escape exec sudo pm-suspend
+bindsym $mod+Shift+Escape exec i3lock -u -p win -i ~/.i3/lock.png && sudo pm-suspend
 
 exec xautolock -time 15 -locker 'i3lock -d -u -p win -i ~/.i3/lock.png' &
 
@@ -180,3 +180,6 @@ new_float none
 # TP buttons
 bindsym XF86AudioRaiseVolume exec pactl set-sink-volume 0 -- +5%
 bindsym XF86AudioLowerVolume exec pactl set-sink-volume 0 -- -5%
+
+# smartcard & ssh
+# exec /home/johannes/bin/enable_smartcard_ssh.sh

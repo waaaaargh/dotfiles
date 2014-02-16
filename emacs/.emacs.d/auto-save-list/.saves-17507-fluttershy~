@@ -1,0 +1,10 @@
+/home/johannes/torservers_ansible/tools/generate_tor_configurations.py
+/home/johannes/torservers_ansible/tools/#generate_tor_configurations.py#
+/home/johannes/torservers_ansible/hosts
+/home/johannes/torservers_ansible/#hosts#
+/home/johannes/torservers_ansible/config/initd-tor-multiproc
+/home/johannes/torservers_ansible/config/#initd-tor-multiproc#
+/home/johannes/torservers_ansible/tor_setup.yml
+/home/johannes/torservers_ansible/#tor_setup.yml#
+/home/johannes/torservers_ansible/user_setup.yml
+/home/johannes/torservers_ansible/#user_setup.yml#
