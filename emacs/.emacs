@@ -16,6 +16,9 @@ Return a list of installed packages or nil for every package not installed."
 (add-to-list    'package-archives
                 '("melpa" . "http://melpa.milkbox.net/packages/") t)
 (package-initialize)
+(add-to-list 	'package-archives
+    		'("marmalade" . "http://marmalade-repo.org/packages/"))
+(package-refresh-contents)
 
 ;;; line wrapping
 (setq-default truncate-lines nil)
@@ -35,10 +38,13 @@ Return a list of installed packages or nil for every package not installed."
 
 ;;; evil mode
 (ensure-package-installed 'evil)
+(ensure-package-installed 'evil-leader)
 (require 'evil)
 (evil-mode 1)
 
 ;;; elpy
+(ensure-package-installed 'epc)
+(ensure-package-installed 'jedi)
 (ensure-package-installed 'elpy)
 (require 'elpy)
 (elpy-enable)
@@ -47,6 +53,9 @@ Return a list of installed packages or nil for every package not installed."
 (ensure-package-installed 'go-autocomplete 'auto-complete)
 (require 'auto-complete-config)
 (require 'go-autocomplete)
+
+;;; haskell
+(ensure-package-installed 'haskell-mode)
 
 ;;; dirtree
 ;;(add-to-list 'load-path "~/.emacs.d/neotree")
