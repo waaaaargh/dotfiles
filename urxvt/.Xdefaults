@@ -8,12 +8,11 @@ URxvt.foreground: grey
 
 URxvt.font: xft: Terminus:pixelsize=14, xft:Terminus (TTF) for Powerline:pixelsize=14:antialias=false
 
-URxvt.perl-ext-common: default,url-select,matcher,clipboard
-URxvt.url-select.launcher: http://clojurescriptkoans.com/
-URxvt.url-select.underline: true
-URxvt.url-select.button: 0
-URxvt.keysym.Shift-Control-C: perl:clipboard:copy
-URxvt.keysym.Shift-Control-V: perl:clipboard:paste
+URxvt.urlLauncher: firefox
+URxvt.matcher.button: 1
+URxvt.perl-ext-common: matcher,readline
+
+## geometry and font
 
 !*background: #002b36
 !*foreground: #657b83
