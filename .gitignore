@@ -47,3 +47,5 @@ Session.vim
 *.png
 *.jpg
 *.jpeg
+
+emacs/.emacs.d/elpa
